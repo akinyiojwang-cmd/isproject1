@@ -6,4 +6,7 @@
 :80 {
     root * /app/public
     php_server
+    
+    # Trust all upstream proxies (like Vercel's edge)
+    trusted_proxies static 0.0.0.0/0 ::/0
 }
